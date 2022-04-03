@@ -18,9 +18,8 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 """
 import tkinter as tk  # Running the app
 from tkinter import messagebox, filedialog  # Interacting with user, displaying messages
-import ctypes  # To specify what "group" the app belongs to - to show a custom icon on the taskbar
 
-from Dependencies.Abstract_Class_Implementing_GUI import Uniformly_Spaced_Points_Selector_GUI
+from Dependencies.Abstract_Class_Implementing_Selector_GUI import Uniformly_Spaced_Points_Selector_GUI
 from Dependencies.Subroutine_Select_The_Points import Select_The_Points
 from Dependencies.Subroutine_Get_Rows_And_Columns_Of_An_Excel_File import Get_Rows_And_Columns_Of_An_Excel_File
 from Dependencies.Subroutine_Validate_Coordinate_Values import Validate_Coordinate_Values
@@ -236,9 +235,6 @@ class Uniformly_Spaced_Points_Selector(Uniformly_Spaced_Points_Selector_GUI):
 
 
 if __name__ == "__main__":
-    # Specifying "group" the app will belong to - to be able to show the icon on the taskbar (arbitrary string)
-    arbitrary_app_id = "mycompany.myproduct.subproduct.version"
-    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(arbitrary_app_id)
     root = tk.Tk()
     Uniformly_Spaced_Points_Selector(root).pack(side="top", fill="both", expand=True)
     root.mainloop()

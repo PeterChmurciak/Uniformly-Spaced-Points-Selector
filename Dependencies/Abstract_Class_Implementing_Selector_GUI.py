@@ -41,7 +41,7 @@ class Uniformly_Spaced_Points_Selector_GUI(tk.Frame, ABC):
             path_to_current_folder, help_menu_icon_name
         )
 
-        # Changing the icon amd title of the root window and making it non-resizable
+        # Changing the icon and title of the root window and making it non-resizable
         self.master.iconbitmap(self.path_to_main_menu_icon)
         self.master.title("USP Selector")
         self.master.resizable(False, False)
