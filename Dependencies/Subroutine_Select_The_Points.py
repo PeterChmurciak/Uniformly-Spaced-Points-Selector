@@ -354,7 +354,7 @@ def Select_The_Points(path_to_excel_file, how_many_points_to_find):
         else selected_points[selected_points_indexes[0]]
     )
     # Congifure google map through API key and set middle point with initial zoom
-    apikey = "abcdefghijklmnopqrstuvwxyz0123456789"  # (your API key here)
+    apikey = ''  # (your API key here)
     google_map = gmplot.GoogleMapPlotter(
         approximate_middle_point.latitude,
         approximate_middle_point.longitude,
